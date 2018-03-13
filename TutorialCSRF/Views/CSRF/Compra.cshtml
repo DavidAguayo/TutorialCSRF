@@ -5,13 +5,20 @@
 }
 
 <h2>Muchas gracias por confiar en nosotros</h2>
-<p>Estos son los productos que ha comprado</p>
+<p>Estos son los productos que ha comprado:</p>
 
+@if (Model != null)
+{
 <ul>
     @foreach (String producto in Model)
-    {
-        <li>@producto</li>
-    }
+        {
+    <li>@producto</li>
+        }
 </ul>
+}
+else
+{
+<h2 style="color:red">No ha elegido ningún producto para comprar</h2>
+}
 
 @Html.ActionLink("Volver a la lista de productos", "Productos", "CSRF")

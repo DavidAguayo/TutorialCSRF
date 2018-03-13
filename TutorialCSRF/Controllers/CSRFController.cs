@@ -60,18 +60,23 @@ namespace TutorialCSRF.Controllers
             }
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Productos(String[] producto)
         {
             //ALMACENAMOS LOS PRODUCTOS ELEGIDOS
             //EN UNA VARIABLE TEMPORAL DEL SERVIDOR
-            TempData["PRODUCTOS"] = producto
+            TempData["PRODUCTOS"] = producto;
 
             //MANDAMOS AL USUARIO A LA PÁGINA DONDE VERÁ
             //EL RESULTADO DE SU COMPRA
             return RedirectToAction("Compra");
         }
 
-
+        public ActionResult Compra()
+        {
+            String[] productos = TempData["PRODUCTOS"] as String[];
+            return View(productos);
+        }
     }
 }
