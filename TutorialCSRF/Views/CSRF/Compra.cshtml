@@ -1,0 +1,17 @@
+﻿@model String[]
+
+@{
+    ViewBag.Title = "Compra";
+}
+
+<h2>Muchas gracias por confiar en nosotros</h2>
+<p>Estos son los productos que ha comprado</p>
+
+<ul>
+    @foreach (String producto in Model)
+    {
+        <li>@producto</li>
+    }
+</ul>
+
+@Html.ActionLink("Volver a la lista de productos", "Productos", "CSRF")

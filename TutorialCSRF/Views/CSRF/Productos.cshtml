@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Productos";
+}
+
+<h2>PRODUCTOS</h2>
+
+<form method="post">
+    <div>
+        <input type="checkbox" name="producto"
+               class="form-control"
+               value="Macintosh" />
+        <img src="~/Images/1.png" style="width: 120px; height: 120px" />
+        <label>Macintosh</label>
+    </div>
+    <div>
+        <input type="checkbox" name="producto"
+               class="form-control"
+               value="IPhone X" />
+        <img src="~/Images/2.jpg" style="width: 120px; height: 120px" />
+        <label>IPhone X</label>
+    </div>
+    <div>
+        <input type="checkbox" name="producto"
+               class="form-control"
+               value="Bugatti Veyron" />
+        <img src="~/Images/3.jpg" style="width: 120px; height: 120px" />
+        <label>Bugatti Veyron</label>
+    </div>
+    <div>
+        <button type="submit"
+                class="btn btn-success">
+            Comprar productos
+        </button>
+    </div>
+</form>
